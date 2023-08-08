@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+  
+  <title>詳細画面</title>
+  
+  <link rel="stylesheet" th:href="@{/detail.css}">
+  
+  <link rel="stylesheet" th:href="@{/reset.css}">
+  
+<body>
+
+<header>
+
+<div class="container">
+
+  <img class="image" src="">
+  
+        <h2 class="headName">JavaTeamDevelopment</h2>
+        
+      </div>
+      
+</header>
+
+</head>
+
+<body>
+
+<div class="form-wrapper">
+
+<form>
+
+<div class="self-container">
+
+<h2 class="self">自己紹介</h2>
+
+<table>
+
+  <tr>
+  
+    <td class="letter">管理番号</td>
+    
+    <td></td>
+    
+  </tr>
+  
+  <tr>
+  
+    <td class="letter">名前</td>
+    
+    <td></td>
+    
+  </tr>
+  
+  <tr>
+  
+    <td class="letter">性別</td>
+    
+    <td></td>
+    
+  </tr>
+  
+  <tr>
+  
+    <td class="letter">趣味</td>
+    
+    <td></td>
+    
+  </tr>
+  
+  <tr>
+  
+    <td class="letter">一言</td>
+    
+    <td></td>
+    
+  </tr>
+  
+</table>
+
+<div class="button">
+
+  <button class="back">戻る</button>
+  
+  <button class="edit">編集</button>
+  
+  <button class="delete" th:href="@{/delete(id=*{id})}">消去</button>
+  
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+document.querySelector('.back').addEventListener('click', function() {
+    window.location.href = '/display';
+});
+
+</script>
+
+</body>
+
+</html>
