@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* ---全体--- */
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+/* ---ヘッダー--- */
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 0 3%;
+    background-color: #aaa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo {
+    width: 30px;
+    height: 30px;
+    background: #333;
+}
+.header_txt {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ---メイン--- */
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #efefef;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: red; */
+}
+
+/* ---フォーム--- */
+.form_ttl {
+    margin-bottom: 50px;
+    font-size: 24px;
+    text-align: center;
+}
+.form_txt {
+    font-weight: bold;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    /* background: green; */
+}
+.form_txt label {
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+    /* background: yellow; */
+    position: relative;
+}
+.form_txt input {
+    width: 280px;
+    height: 50px;
+    font-size: 16px;
+    margin-left: 50px;
+    flex-shrink: 1;
+    /* background: blue; */
+}
+.form_submit {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.form_submit input {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #adc8f9;
+}
+.form_signup {
+    font-size: 18px;
+    text-align: center;
+}
+.form_signup a {
+    color: #578ee5;
+}
+
+/* -----各ページレイアウト----- */
+
+/* ---sign-upページ--- */
+#signup_page .form_ttl {
+    margin-bottom: 40px;
+}
+#signup_page .form_txt {
+    margin-bottom: 40px;
+}
+#signup_page .form_txt label::after {
+    content: "必須";
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #fff;
+    background: #f00;
+    position: absolute;
+    top: -5px;
+    right: -50px;
+}
+#signup_page .form_txt input {
+    margin-left: 80px;
+}
+
+/* ----------メディアクエリ（ノートPC用）---------- */
+@media screen and (max-width: 1200px) {
+    .header {
+        height: 65px;
+        padding: 0 4%;
+    }
+    .header_logo {
+        width: 27px;
+        height: 27px;
+    }
+    .header_txt {
+        font-size: 17px;
+    }
+    .form_ttl {
+        margin-bottom: 45px;
+        font-size: 22px;
+    }
+    .form_txt {
+        margin-bottom: 45px;
+    }
+    .form_txt label {
+        font-size: 13px;
+    }    
+    .form_txt input {
+        width: 250px;
+        height: 45px;
+        margin-left: 40px;
+        font-size: 17px;
+    }
+    .form_submit {
+        margin-bottom: 35px;
+    }
+    .form_submit input {
+        width: 135px;
+        height: 47px;
+        font-size: 17px;
+    }
+    .form_signup {
+        font-size: 17px;
+    }
+
+    /* -----各ページレイアウト----- */
+
+    /* ---sign-upページ--- */
+    #signup_page .form_txt label::after {
+        font-size: 13px;
+        right: -48px;
+    }
+    #signup_page .form_txt input {
+        margin-left: 70px;
+    }    
+}
+
+/*---メディアクエリ（タブレット用）---*/
+@media screen and (max-width: 992px) {
+
+}
+
+/*---メディアクエリ（スマホ用）---*/
+@media screen and (max-width: 767px) {
+    .header {
+        height: 60px;
+        padding: 0 5%;
+    }
+    .header_logo {
+        width: 25px;
+        height: 25px;
+    }
+    .header_txt {
+        font-size: 16px;
+    }
+    .form_ttl {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+    .form_txt {
+        margin-bottom: 40px;
+    }
+    .form_txt label {
+        font-size: 12px;
+    }    
+    .form_txt input {
+        width: 200px;
+        height: 40px;
+        font-size: 14px;
+        margin-left: 30px;
+    }
+    .form_submit {
+        margin-bottom: 30px;
+    }
+    .form_submit input {
+        width: 125px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .form_signup {
+        font-size: 16px;
+    }
+
+    /* -----各ページレイアウト----- */
+
+    /* ---sign-upページ--- */
+    #signup_page .form_txt label::after {
+        padding: 4px;
+        font-size: 12px;
+        right: -45px;
+    }
+    #signup_page .form_txt input {
+        margin-left: 60px;
+    }    
+}
