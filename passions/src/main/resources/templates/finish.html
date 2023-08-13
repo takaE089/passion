@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+  
+  <title>一覧画面</title>
+  
+  <link rel="stylesheet" th:href="@{/top.css}">
+  
+  <link rel="stylesheet" th:href="@{/reset.css}">
+  
+  </head>
+  
+<body id="signup_page">
+
+<header class="header">
+
+    <div class="header_logo"></div>
+    
+    <p class="header_txt">JavaTeamDevelopment</p>
+    
+</header>
+<main class="main">
+
+    <div class="container">
+    
+      
+        
+            <h2 class="self">自己紹介の登録が完了しました！</h2>
+            
+            
+            <div class="form_txt">
+                <label for="name">管理者番号</label>
+                <p></p>
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="name">名前</label>
+                
+                <p th:text="${session.userForm.name}"></p> 
+                
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="ruby">フリガナ</label>
+                
+                 
+                <p th:text="${session.userForm.ruby}"></p>            
+            
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="gender">性別</label>
+                
+                <p th:text="${session.userForm.gender}"></p>                
+            </div>
+            
+         
+            
+            <div class="hobby-container">
+                <label for="hobby">趣味:</label>
+
+                 <p th:text="${session.userForm.hobby}"></p>
+
+                </div>
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="text">一言</label>
+                
+                <div>
+                
+                 <p th:text="${session.userForm.introduction}"></p>
+                
+                </div>
+                
+            </div>
+            
+            <p>自己紹介の内容を変更するには登録内容一覧画面から編集をして頂くか、
+            管理者へお問い合わせください。</p>
+    </div>
+</main>
+
+</body>
+</html>

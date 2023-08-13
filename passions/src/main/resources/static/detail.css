@@ -1,24 +1,44 @@
 @charset "UTF-8";
+/* ---全体--- */
+* {
+   
+    box-sizing: border-box;
+}
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #d1d0d07e;
+/* ---ヘッダー--- */
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 0 3%;
+    background-color: #aaa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo {
+    width: 30px;
+    height: 30px;
+    background: #333;
+}
+.header_txt {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ---メイン--- */
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #efefef;
 }
 
 
-
-.headName{
-  text-align: right;
-  padding-right: 50px;
-  color: #000000;
-}
-
-.container {
-  background-color: #3333337a;
-  padding: 10px;
-}
+/* ---フォーム--- */
 
 .form-wrapper {
   display: flex;
@@ -31,12 +51,6 @@ form {
   max-width: 400px;
   padding: 20px;
   margin: auto;
-}
-
-.self-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
 .self {
@@ -52,75 +66,92 @@ table {
   margin-bottom: 20px;
 }
 
-th,
-td {
+
+td.letter {
   padding: 15px;
   text-align: center;
   border: 1px solid #000;
   background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  width: 25%;
 }
 
-th {
+td {
   background-color: #d1d0d0;
   color: #000;
   border: 1px solid #000;
 }
 
-td.letter{
-font-size: 15px;
-width: 25%;
-}
+
 
 .button {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
-}
+   align-items: center;
+   width: 100%;
+  }
 
 .back,
 .edit,
 .delete {
+  flex: 0 0 auto;
+  display: inline-block;
   padding: 10px 20px;
-  color: #fff;
+  color: black;
+  text-align: center;
+  background-color: #87CEFA;
   border: none;
-  cursor: pointer;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.back,
-.edit {
-  background-color: #87CEFA; /* Sky blue */
-}
 
 .delete {
-  background-color: #FF6347; /* Tomato red */
+  background-color: #FF6347;
 }
 
+/* ----------メディアクエリ（ノートPC用）---------- */
 
-@media (max-width: 766px) {
-  td.letter {
-    font-size: 10px;
-  }
-form {
-    flex-direction: column;
-  }
-}
+@media screen and (max-width: 1200px) {
+    .header {
+        height: 65px;
+        padding: 0 4%;
+    }
+    .header_logo {
+        width: 27px;
+        height: 27px;
+    }
+    .header_txt {
+        font-size: 17px;
+    }
 
-@media (min-width: 767px) and (max-width: 990px) {
-  td.letter {
-    font-size: 12px;
-  }
+    .back,
+    .edit,
+    .delete {
+        font-size: 17px;
+    }
 
-}
 
-@media (min-width: 991px) and (max-width: 1200px) {
-  td.letter {
-    font-size: 13px;
-  }
-}
-
-@media (min-width: 1201px) {
-  td.letter {
-    font-size: 15px;
-  }
+/*---メディアクエリ（タブレット用）---*/
+@media screen and (max-width: 992px) {
 
 }
+
+/*---メディアクエリ（スマホ用）---*/
+@media screen and (max-width: 767px) {
+    .header {
+        height: 60px;
+        padding: 0 5%;
+    }
+    .header_logo {
+        width: 25px;
+        height: 25px;
+    }
+    .header_txt {
+        font-size: 16px;
+    }
+    .back,
+    .edit,
+    .delete {
+        font-size: 16px;
+    }

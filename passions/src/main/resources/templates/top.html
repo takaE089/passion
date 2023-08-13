@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+  
+  <title>一覧画面</title>
+  
+  <link rel="stylesheet" th:href="@{/top.css}">
+  
+  <link rel="stylesheet" th:href="@{/reset.css}">
+  
+  </head>
+  
+<body id="top_page">
+
+<header class="header">
+
+    <div class="header_logo"></div>
+    
+    <p class="header_txt">JavaTeamDevelopment</p>
+    
+</header>
+
+
+<main class="main">
+
+ <div class="submit">
+
+
+   <div class="submit-header">
+
+     <h2>自己紹介登録</h2>
+            
+     <a class="button" th:href="@{/input}">登録に進む </a>
+                
+   </div>
+
+    <p class="letter">新しく自己紹介を作ります。</p>
+    <p class="letter">あなたをより知ってもらうために、</p>
+    <p class="letter">趣味や一言を工夫しましょう。</p>
+    <p class="letter">最高の自己紹介を完成させて、よりあなたを</p>
+    <p class="letter">知ってもらえるチャンスにしましょう。</p>
+
+ </div>
+
+ <div class="edit">
+
+
+   <div class="display">
+
+     <h2>自己紹介登録者一覧</h2>
+            
+     <a class="button" th:href="@{/display}">一覧を編集する </a>
+                
+   </div>
+
+    <p class="letter">登録している人を確認します。</p>
+    <p class="letter">登録している人の自己紹介記事を見てみましょう。</p>
+
+ </div>
+ 
+</main>
+
+</body>
+</html>

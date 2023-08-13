@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+    
 @Entity
 @Table(name = "users")
 @Data
@@ -17,11 +18,24 @@ public class User {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @Column(name = "control_num")
+    private String controlNum;
 
+    @Column(name = "user_id")
+    private String userId;
+
+    @Column(name = "mail")
+    private String mail;
+
+    @Column(name = "password")
+    private String password; 
+        
+        
     @Column(name = "name")
     private String name;
     
-    @Column(name = "ryby")
+    @Column(name = "ruby")
     private String ruby;
     
     @Column(name = "gender")
@@ -32,4 +46,6 @@ public class User {
     
     @Column(name = "introduction")
     private String introduction;
+
+
 }

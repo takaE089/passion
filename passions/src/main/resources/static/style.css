@@ -38,47 +38,61 @@ a {
     position: relative;
     background: #efefef;
 }
-
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: red; */
+}
 
 /* ---フォーム--- */
-.form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.form_ttl {
+    margin-bottom: 50px;
+    font-size: 24px;
+    text-align: center;
 }
-
-form {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  margin: auto;
+.form_txt {
+    font-weight: bold;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    /* background: green; */
 }
-
-.self {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  color: #000;
-  text-align: center;
+.form_txt label {
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+    /* background: yellow; */
+    position: relative;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+.form_txt input {
+    width: 280px;
+    height: 50px;
+    font-size: 16px;
+    margin-left: 50px;
+    flex-shrink: 1;
+    /* background: blue; */
 }
-
-th,
-td {
-  padding: 15px;
-  text-align: center;
-  border: 1px solid #000;
-  background-color: rgb(255, 255, 255);
+.form_submit {
+    margin-bottom: 40px;
+    text-align: center;
 }
-
-th {
-  background-color: #d1d0d0;
-  color: #000;
-  border: 1px solid #000;
+.form_submit input {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #adc8f9;
+}
+.form_signup {
+    font-size: 18px;
+    text-align: center;
+}
+.form_signup a {
+    color: #578ee5;
 }
 
 /* -----各ページレイアウト----- */

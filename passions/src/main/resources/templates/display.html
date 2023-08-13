@@ -14,21 +14,18 @@
   
   </head>
   
-<body>
+<body id="signup_page">
 
-<header>
+<header class="header">
 
-<div class="container">
-
-  <img class="image" src="">
-  
-        <h2 class="headName">JavaTeamDevelopment</h2>
-        
-      </div>
-      
+    <div class="header_logo"></div>
+    
+    <p class="header_txt">JavaTeamDevelopment</p>
+    
 </header>
 
-<div class="form-wrapper">
+<main class="main">
+
 
 <form>
 
@@ -50,13 +47,13 @@
     
     <tbody>
     
-        <tr th:each="user : ${users}">
+        <tr th:each="user : ${users}" th:if="${user != null}">
         
-             <td><a th:href="@{/details/{id}(id=${users.id})}" th:text="${usesr.id}"></a></td>
-            
-            <td th:text="${users.name}"></td>
-            
-        </tr>
+        <td><a th:href="@{/detail}" th:text="${user.userId}"></a></td>
+    
+        <td th:text="${user.name}"></td>
+
+</tr>
         
     </tbody>
     
@@ -64,9 +61,9 @@
 
 </form>
 
-</div>
 
 
+</main>
 </body>
 
 </html>

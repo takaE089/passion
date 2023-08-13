@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入力画面</title>
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/input.css}">
+</head>
+<body id="signup_page">
+
+<header class="header">
+
+    <div class="header_logo"></div>
+    
+    <p class="header_txt">JavaTeamDevelopment</p>
+    
+</header>
+
+<main class="main">
+
+    <div class="container">
+    
+        <form action="/regist" method="post">
+        
+            <h2 class="self">自己紹介の内容を記入して下さい</h2>
+            
+            <div class="form_txt">
+            
+                <label for="name">名前</label>
+                
+                <input type="text" id="name" name="name" value="" required>
+                
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="ruby">フリガナ</label>
+                
+                <input type="text" id="ruby" name="ruby" value="" required>
+                
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="gender">性別</label>
+                
+                <label>
+                
+                <input type="radio" id="gender" name="gender" value="male"> 男性
+                
+                </label>
+                
+                <label>
+                
+                <input type="radio" id="gender" name="gender" value="female"> 女性
+                
+                </label>
+                
+            </div>
+            
+         
+            
+            <div class="hobby-container">
+                <label for="hobby">趣味:</label>
+
+                <div class="hobby-check">
+                <label>
+                <input type="checkbox" name="hobby" value="読書"> 読書
+                </label>
+    
+                <label>
+                <input type="checkbox" name="hobby" value="映画鑑賞"> 映画鑑賞
+                </label>
+
+                <label>
+                <input type="checkbox" name="hobby" value="音楽鑑賞"> 音楽鑑賞
+                </label>
+
+                <label>
+                <input type="checkbox" name="hobby" value="旅行"> 旅行
+                </label>
+
+                <label>
+                <input type="checkbox" name="hobby" value="料理"> 料理
+                </label>
+
+                <label>
+                <input type="checkbox" name="hobby" value="運動"> 運動
+                </label>
+
+                <label>
+                <input type="checkbox" name="hobby" value="ゲーム"> ゲーム
+                </label>
+
+                </div>
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="text">一言</label>
+                
+                <input type="text" id="introduction" name="introduction" value="" required>
+                
+            </div>
+            
+            <div class="edit">
+            
+                <a  class = "back" th:href="@{/display}">戻る</a>
+            
+                <input type="submit" value="登録">
+                
+            </div>
+            
+            
+        </form>
+        
+    </div>
+</main>
+</body>
+</html>

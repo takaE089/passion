@@ -1,0 +1,90 @@
+
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入力確認画面</title>
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/input.css}">
+</head>
+<body id="signup_page">
+
+<header class="header">
+
+    <div class="header_logo"></div>
+    
+    <p class="header_txt">JavaTeamDevelopment</p>
+    
+</header>
+
+<main class="main">
+
+    <div class="container">
+    
+      <form action="/regist" method="post">
+        
+            <h2 class="self">自己紹介登録確認</h2>
+            
+            <div class="form_txt">
+            
+                <label for="name">名前</label>
+                
+                <p th:text="${session.userForm?.name}"></p> 
+                
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="ruby">フリガナ</label>
+                
+                 
+                <p th:text="${session.userForm.ruby}"></p>            
+            
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="gender">性別</label>
+                
+                <p th:text="${session.userForm.gender}"></p>                
+            </div>
+            
+         
+            
+            <div class="hobby-container">
+                <label for="hobby">趣味:</label>
+
+                 <p th:text="${session.userForm.hobby}"></p>
+
+                </div>
+            </div>
+            
+            <div class="form_txt">
+            
+                <label for="text">一言</label>
+                
+                <div>
+                
+                 <p th:text="${session.userForm.introduction}"></p>
+                
+                </div>
+                
+            </div>
+            
+            <div class="edit">
+            
+                <a  class = "back" th:href="@{/input}">戻る</a>
+            
+                <input type="submit" value="完了">
+                
+            </div>
+            
+
+   </form>
+        
+  </div>
+ 
+</main>
+</body>
+</html>
