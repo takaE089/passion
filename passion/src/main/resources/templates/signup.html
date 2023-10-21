@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規登録画面</title>
+    <link rel="stylesheet" th:href="@{css/reset.css}">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<body id="signup_page">
+<header class="header">
+    <div class="header_logo"></div>
+    <p class="header_txt">JavaTeamDevelopment</p>
+</header>
+<main class="main">
+    <div class="container">
+        <form action="">
+            <h2 class="form_ttl">新規会員登録</h2>
+            <p class="form_txt">
+                <label for="user-id">UserID</label>
+                <input type="text" id="user-id" name="user-id" value="" required>
+            </p>
+            <p class="form_txt">
+                <label for="mail">MailAddress</label>
+                <input type="email" id="mail" name="mail" value="" required>
+            </p>
+            <p class="form_txt">
+                <label for="password">PassWord</label>
+                <input type="text" id="password" name="password" value="" required>
+            </p>
+            <p class="form_submit">
+                <input type="submit" value="登録">
+            </p>
+            <p class="form_signup"><a th:href="@{/login}">ログイン画面へ</a></p>
+        </form>
+    </div>
+</main>
+</body>
+</html>
